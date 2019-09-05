@@ -1,0 +1,10 @@
+# macOS specific files:
+.DS_Store
+
+# Cache files:
+*.log
+*.pot
+*.pyc
+__pycache__/
+.idea/
+

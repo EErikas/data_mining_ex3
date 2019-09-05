@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1 class="mt-5">Upload file</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <div id="div_id_selector" class="form-group"><label for="id_selector" class="col-form-label  requiredField">
+            Choose classifier<span class="asteriskField">*</span> </label>
+            <div class=""><select name="selector" class="select form-control" id="id_selector">
+            </select>
+                <small id="hint_id_selector" class="form-text text-muted">You need to upload file first</small>
+            </div>
+        </div>
+        <input type="submit" class="btn-lg btn-primary" value="Upload">
+    </form>
+    <script>
+        document.getElementById("id_docfile").addEventListener("change", function () {
+            const file = document.getElementById("id_docfile").files[0];
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const file = event.target.result;
+                //Read first line of .csv file and separate values by comma:
+                const allOptions = file.split(/\r\n|\n/)[0].split(',');
+                //Remove previous options:
+                document.getElementById("id_selector").options.length = 0;
+                //Add options to selector
+                const selector = document.getElementById("id_selector");
+                for (i = 0; i < allOptions.length; i++) {
+                    let option = document.createElement("option");
+                    option.text = allOptions[i];
+                    option.value = allOptions[i];
+                    selector.add(option, selector[i]);
+                }
+            };
+
+            reader.onerror = (event) => {
+                alert(event.target.error.name);
+            };
+
+            reader.readAsText(file);
+        });
+
+
+    </script>
+    {% if image_data %}
+        <img src="data:image/png;base64, {{ image_data }}" alt="Decission Tree"/>
+    {% endif %}
+{% endblock %}

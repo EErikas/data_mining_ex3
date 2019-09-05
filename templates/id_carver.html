@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1 class="mt-5">Find Personal and Corporate Lithuanian IDs</h1>
+    {% csrf_token %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn-lg btn-primary" value="Upload">
+    </form>
+    {% if results %}
+
+        {% if results.valid_ak %}
+            <h3 class="mt-5">Valid personal IDs (Realūs asmens kodai)</h3>
+            <ul>
+                {% for foo in results.valid_ak %}
+                    <li><a href="{% url 'personal-id-checker' personal_id=foo %}">{{ foo }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if results.invalid_ak %}
+            <h3 class="mt-5">Invalid personal IDs (Netikri asmens kodai)</h3>
+            <ul>
+                {% for foo in results.invalid_ak %}
+                    <li>{{ foo }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if results.valid_jak %}
+            <h3 class="mt-5">Valid corporate IDs (Realūs juridinio asmens kodai)</h3>
+            <ul>
+                {% for foo in results.valid_jak %}
+                    <li><a href="{% url 'corporate-id-checker' corporate_id=foo %}" rel="noopener noreferrer" target="_blank">{{ foo }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if results.invalid_jak %}
+            <h3 class="mt-5">Invalid corporate IDs (Netikri juridinio asmens kodai)</h3>
+            <ul>
+                {% for foo in results.invalid_jak %}
+                    <li>{{ foo }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    {% endif %}
+{% endblock %}
