@@ -20,7 +20,7 @@ The personal code consists of 11 digits, for example: 33309240064:
   + If the personal code is written ABCDEFGHIJK:\
     S = A * 1 + B * 2 + C * 3 + D * 4 + E * 5 + F * 6 + G * 7 + H * 8 + I * 9 + J * 1
   + The sum S is divided by 11, and if the remainder is not equal to 10, it is the control number K. 
-  + If the remainder is 10, a new sum is calculated with the following weighting factors:\ 
+  + If the remainder is 10, a new sum is calculated with the following weighting factors:\
     S = A * 3 + B * 4 + C * 5 + D * 6 + E * 7 + F * 8 + G * 9 + H * 1 + I * 2 + J * 3
   + This sum S is again divided by 11, and if the remainder is not equal to 10, it is a control number K. 
   + If the remainder is 10, the control number K is 0.
