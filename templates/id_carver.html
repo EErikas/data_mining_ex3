@@ -11,7 +11,7 @@
     {% if results %}
 
         {% if results.valid_ak %}
-            <h3 class="mt-5">Valid personal IDs (Realūs asmens kodai)</h3>
+            <h3 class="mt-5">Valid format personal IDs (Reikalavimus atitinkantys asmens kodai)</h3>
             <ul>
                 {% for foo in results.valid_ak %}
                     <li><a href="{% url 'personal-id-checker' personal_id=foo %}">{{ foo }}</a></li>
@@ -19,7 +19,7 @@
             </ul>
         {% endif %}
         {% if results.invalid_ak %}
-            <h3 class="mt-5">Invalid personal IDs (Netikri asmens kodai)</h3>
+            <h3 class="mt-5">Invalid format personal IDs (Reikalavimų neatitinkantys asmens kodai)</h3>
             <ul>
                 {% for foo in results.invalid_ak %}
                     <li>{{ foo }}</li>
