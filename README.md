@@ -24,3 +24,5 @@ S = A * 3 + B * 4 + C * 5 + D * 6 + E * 7 + F * 8 + G * 9 + H * 1 + I * 2 + J * 
 This sum S is again divided by 11, and if the remainder is not equal to 10, it is a control number K. If the remainder is 10, the control number K is 0.
 ### Corporate IDs:
 Corporate IDs consist of 7 or 9 digits and their validity is checked by searching for them in the Lithuanian Cenre of Registers
+
+Working example can be found here: <https://ee-data-mining-lab.herokuapp.com>
