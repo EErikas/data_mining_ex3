@@ -17,7 +17,7 @@ The personal code consists of 11 digits, for example: 33309240064:
 * the next three digits are the number of those born on that day;
 * the last one is a check digit derived from other digits according to the following rules:
 
-  + If the personal code is written ABCDEFGHIJK:
+  + If the personal code is written ABCDEFGHIJK:\
     S = A * 1 + B * 2 + C * 3 + D * 4 + E * 5 + F * 6 + G * 7 + H * 8 + I * 9 + J * 1
   + The sum S is divided by 11, and if the remainder is not equal to 10, it is the control number K. 
   + If the remainder is 10, a new sum is calculated with the following weighting factors: 
