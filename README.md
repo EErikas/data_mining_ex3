@@ -24,6 +24,7 @@ The personal code consists of 11 digits, for example: 33309240064:
     S = A * 3 + B * 4 + C * 5 + D * 6 + E * 7 + F * 8 + G * 9 + H * 1 + I * 2 + J * 3
   + This sum S is again divided by 11, and if the remainder is not equal to 10, it is a control number K. 
   + If the remainder is 10, the control number K is 0.
+ Note: there is a rare exeception for elderly people who cannot remember the month or day of their birthdate, in such case the month or day numbers are replaced by 0s
 ### Corporate IDs:
 Corporate IDs consist of 7 or 9 digits and their validity is checked by searching for them in the Lithuanian Cenre of Registers
 ***
