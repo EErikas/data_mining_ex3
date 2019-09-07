@@ -13,7 +13,8 @@ The personal code consists of 11 digits, for example: 33309240064:
   + 1 - 19th century male, 2 - 19th century female, 
   + 3 - 20th century male, 4 - 20th century female, 
   + 5 - 21st century male, 6 - 21st century female;
-* the next six are the last two digits of the person's year of birth, month (two digits), day (two digits);
+* the next six are the last two digits of the person's year of birth, month (two digits), day (two digits)\
+  Note: there is a rare exeception for elderly people who cannot remember the month or day of their birthdate, in such case the month or day numbers are replaced by 0s. In the site such cases show NA instead of the 0s.;
 * the next three digits are the number of those born on that day;
 * the last one is a check digit derived from other digits according to the following rules:
 
@@ -25,7 +26,6 @@ The personal code consists of 11 digits, for example: 33309240064:
   + This sum S is again divided by 11, and if the remainder is not equal to 10, it is a control number K. 
   + If the remainder is 10, the control number K is 0.
 
-Note: there is a rare exeception for elderly people who cannot remember the month or day of their birthdate, in such case the month or day numbers are replaced by 0s. In the site such cases show NA instead of the 0s.
 ### Corporate IDs:
 Corporate IDs consist of 7 or 9 digits and their validity is checked by searching for them in the Lithuanian Cenre of Registers
 ***
