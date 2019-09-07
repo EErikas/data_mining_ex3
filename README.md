@@ -9,14 +9,14 @@ This page detects corporate and personal Lithuanian IDs in the entered text
 ### Personal IDs
 The personal code consists of 11 digits, for example: 33309240064:
 
-* the first shows the centenary of birth and the gender of the person 
+* **The first** shows the centenary of birth and the gender of the person 
   + 1 - 19th century male, 2 - 19th century female, 
   + 3 - 20th century male, 4 - 20th century female, 
   + 5 - 21st century male, 6 - 21st century female;
-* the next six are the last two digits of the person's year of birth, month (two digits), day (two digits)\
-  Note: there is a rare exeception for elderly people who cannot remember the month or day of their birthdate, in such case the month or day numbers are replaced by 0s. In the site such cases show NA instead of the 0s.;
-* the next three digits are the number of those born on that day;
-* the last one is a check digit derived from other digits according to the following rules:
+* **The next six** are the last two digits of the person's year of birth, month (two digits), day (two digits)\
+  **Note:** there is a rare exeception for elderly people who cannot remember the month or day of their birthdate, in such case the month or day numbers are replaced by 0s. In the site such cases show NA instead of the 0s;
+* **The next three** digits are the number of those born on that day;
+* **The last one** is a check digit derived from other digits according to the following rules:
 
   + If the personal code is written ABCDEFGHIJK:\
     S = A * 1 + B * 2 + C * 3 + D * 4 + E * 5 + F * 6 + G * 7 + H * 8 + I * 9 + J * 1
