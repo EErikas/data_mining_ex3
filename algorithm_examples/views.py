@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from .forms import UploadForm, IdCarverForm
 from .algorithms.decision_tree import DecisionTree
-from .algorithms.id_code_detection import text_sanitizer, get_company_data, get_personal_description, id_checker
+from .algorithms.id_code_detection import text_sanitizer, get_company_data, get_personal_description
 
 
 def view_decision_tree(request):
