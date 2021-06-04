@@ -1,6 +1,6 @@
 pydotplus==2.0.2
 pandas==0.24.1
 requests==2.22.0
-Django==2.2.5
+Django==2.2.21
 beautifulsoup4==4.8.0
 scikit_learn==0.21.3
